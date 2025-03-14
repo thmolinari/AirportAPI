@@ -14,5 +14,6 @@ public interface AirportNearMeProjection {
     double getLongitude();
     double getAltitude();
     double getDistanciaKM();
+    double getDistanciaNM();
     
 }

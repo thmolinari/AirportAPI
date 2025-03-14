@@ -25,7 +25,10 @@ public interface AirportRepository extends JpaRepository<Airport, Long> {
         airport.altitude,
         SQRT(
             power(airport.latitude - :latOrigem, 2 ) +
-            power(airport.longitude - :lonOrigem, 2)) * 60 * 1.852 as distanciaKM
+            power(airport.longitude - :lonOrigem, 2)) * 60 * 1.852 as distanciaKM,
+        SQRT(
+                    power(airport.latitude - :latOrigem, 2 ) +
+                    power(airport.longitude - :lonOrigem, 2)) * 60  as distanciaNM
                                    
     from AIRPORT
     order by distanciaKM 

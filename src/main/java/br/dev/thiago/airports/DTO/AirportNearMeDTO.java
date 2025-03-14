@@ -13,6 +13,7 @@ public class AirportNearMeDTO {
     private double longitude;
     private double altitude;
     private double distanciaKM;
+    private double distanciaNM;
 
     public AirportNearMeDTO(AirportNearMeProjection airportProjection) {
         this.id = airportProjection.getId();
@@ -23,6 +24,7 @@ public class AirportNearMeDTO {
         this.longitude = airportProjection.getLongitude();
         this.altitude = airportProjection.getAltitude();
         this.distanciaKM = airportProjection.getDistanciaKM();
+        this.distanciaNM = airportProjection.getDistanciaNM();
     }
 
     public long getId() {
@@ -56,16 +58,10 @@ public class AirportNearMeDTO {
     public double getDistanciaKM() {
         return distanciaKM;
     }
-    
-    public AirportNearMeDTO(long id, String name, String city, String iataCode, double latitude, double longitude, double altitude, double distanciaKM) {
-        this.id = id;
-        this.name = name;
-        this.city = city;
-        this.iataCode = iataCode;
-        this.latitude = latitude;
-        this.longitude = longitude;
-        this.altitude = altitude;
-        this.distanciaKM = distanciaKM;
+
+    public double getDistanciaNM() {
+        return distanciaNM;
     }
+    
     
 }
